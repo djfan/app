@@ -1,6 +1,6 @@
 {
   "name": "WiFind",
-  "version": "0.2",
+  "version": "0.3.1",
   "description": "An app that maps the locations of WiFi access points.",
   "dependencies": {
     "gulp": "^3.5.6",
@@ -15,7 +15,6 @@
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
-    "wifiwizard",
     "cordova-plugin-whitelist",
     "cordova-plugin-mauron85-background-geolocation",
     "cordova-plugin-device",
@@ -23,7 +22,16 @@
     "cordova-plugin-app-version",
     "org.apache.cordova.splashscreen",
     "cordova-plugin-app-preferences",
-    "cordova-plugin-autostart"
+    "cordova-plugin-autostart",
+    "cordova-plugin-local-notifications",
+    {
+      "locator": "https://github.com/jeffcharles/WifiWizard.git",
+      "id": "com.pylonproducts.wifiwizard"
+    },
+    {
+      "locator": "https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free",
+      "id": "cordova-sqlite-evcore-extbuild-free"
+    }
   ],
   "cordovaPlatforms": [
     {

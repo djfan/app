@@ -4,7 +4,7 @@ angular.module('WiFind.app', [
 ])
 
 .constant('API', {
-  url: 'http://capstone.cloudapp.net/ingestion/'
+  url: 'http://wifindproject.com/ingestion/'
 })
 
 .run(function($ionicPlatform, $rootScope, logger, scanning) {
@@ -35,6 +35,11 @@ angular.module('WiFind.app', [
         cordova.getAppVersion.getVersionNumber().then(function (version) {
             $rootScope.APPLICATION_VERSION = version;
         });
+
+        $rootScope.$apply(function() {
+            scanning.init();
+        });
+
     });
 
     $rootScope.$watch(
